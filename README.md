@@ -1,5 +1,7 @@
 # Chat on Phoenix framework
 
+[`Demo`](https://enigmatic-inlet-68000.herokuapp.com/)
+
 To start your Phoenix app:
 
   1. Install dependencies with `mix deps.get`
