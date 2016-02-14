@@ -1,0 +1,34 @@
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+<script>require("web/static/js/chat")</script>
+
+<h2>Show conversation</h2>
+
+<ul>
+
+  <strong>Recipients:</strong>
+  <%= for cp <- @conversation.conversation_participants do %>
+  <li>
+    <%= cp.user.email %>
+  </li>
+  <%= end %>
+
+</ul>
+
+<%= tag :meta, name: "conversation_id", content: @conversation.id %>
+<%= tag :meta, name: "user_token", content: Phoenix.Token.sign(@conn, "user_id", current_user(@conn).id) %>
+<%= tag :meta, name: "user_id", content: current_user(@conn).id %>
+
+<div id="messages">
+  <%= for cm <- @conversation_messages do %>
+    <p><b>[<%= cm.user.email %>]</b>: <%= cm.message %></p>
+    <%= end %>
+</div>
+<br/>
+
+<div class="col-md-12 form-group">
+  <label>Message</label>
+  <input id="message" type="text" class="form-control" />
+</div>
+
+<%= link "Back", to: conversation_path(@conn, :index) %>
