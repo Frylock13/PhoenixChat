@@ -1,4 +1,4 @@
-# ChatDemo
+# Chat on Phoenix framework
 
 To start your Phoenix app:
 
