@@ -13,7 +13,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :chat_demo, ChatDemo.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [scheme: "https", host: "calm-peak-6151.herokuapp.com", port: 443],
+  url: [scheme: "https", host: "enigmatic-inlet-68000.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
