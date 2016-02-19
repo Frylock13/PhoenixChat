@@ -1,6 +1,6 @@
 # Chat on Phoenix framework
 
-[`Demo`](https://enigmatic-inlet-68000.herokuapp.com/)
+[`Demo`](https://calm-peak-6151.herokuapp.com/)
 
 To start your Phoenix app:
 
